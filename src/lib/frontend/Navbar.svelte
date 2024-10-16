@@ -77,7 +77,7 @@
 	<span class="bg-black dark:bg-white"></span>
 </button>
 
-<div class="menudrop" class:open={isMenuOpen}>
+<div class="menudrop bg-transparent backdrop-blur-md" class:open={isMenuOpen}>
 	<menu>
 		<ul>
 			<li><a class="hover:text-purple-300" href="/">Home</a></li>

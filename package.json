@@ -43,6 +43,7 @@
 		"lenis": "^1.1.14",
 		"lucide-svelte": "^0.452.0",
 		"mode-watcher": "^0.4.1",
+		"motion-start": "^0.1.0",
 		"svelte-cloudinary": "^2.1.1",
 		"svelte-motion": "^0.12.2",
 		"tailwind-merge": "^2.5.3",

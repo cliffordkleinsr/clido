@@ -8,7 +8,7 @@
 	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { Navbar, Footer } from '$lib/frontend';
 
-	// setMode('dark');
+	setMode('dark');
 	$effect(() => {
 		// register ScrollTrigger
 		gsap.registerPlugin(ScrollTrigger);

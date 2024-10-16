@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cn } from '$lib/utils';
 	import { onMount } from 'svelte';
-	import { Motion } from 'svelte-motion';
+	import { Motion } from 'motion-start';
 
 	export let word: string = 'Blur In';
 	export let variant: {
@@ -45,21 +45,13 @@
 	});
 </script>
 
-<Motion
+<Motion.h1
 	initial="hidden"
 	animate={isVisible ? 'visible' : 'hidden'}
 	transition={{ duration }}
 	variants={combinedVariants}
-	let:motion
+	class={cn(className, ' font-manrope leading-[5rem] drop-shadow-sm')}
+	bind:el={element}
 >
-	<h1
-		bind:this={element}
-		class={cn(
-			className,
-			' font-manrope font-extralight tracking-[-0.02em] drop-shadow-sm md:leading-[5rem]'
-		)}
-		use:motion
-	>
-		{word}
-	</h1>
-</Motion>
+	{word}
+</Motion.h1>
