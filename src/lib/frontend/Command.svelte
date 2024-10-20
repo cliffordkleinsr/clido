@@ -28,15 +28,17 @@
 	>
 		<span>⌘</span>K
 	</kbd>
-	<Command.Dialog bind:open>
+	<Command.Dialog bind:open class="noise">
 		<Command.Input placeholder="Type a command or search..." />
 		<Command.List>
 			<Command.Empty>No results found.</Command.Empty>
 			<Command.Group heading="Suggestions">
-				<Command.Item>
-					<House class="mr-2 h-4 w-4" />
-					<span><a class="font-manrope font-extralight" href="/">Home</a></span>
-				</Command.Item>
+				<a class="font-manrope font-extralight" href="/" onclick={() => (open = !open)}>
+					<Command.Item>
+						<House class="mr-2 h-4 w-4" />
+						Home
+					</Command.Item>
+				</a>
 				<Command.Item>
 					<Calculator class="mr-2 h-4 w-4" />
 					<span>Calculator</span>

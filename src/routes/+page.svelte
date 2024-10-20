@@ -6,6 +6,7 @@
 	import { Button } from '$lib/components/ui/button';
 	import { BlurIn, OrbitingCircles } from '$lib/motion';
 	import ArrowUpRight from 'lucide-svelte/icons/arrow-up-right';
+	import { Moai } from '$lib/SVG';
 
 	interface Projex {
 		title: { description: string; src?: string };
@@ -73,7 +74,7 @@
 </script>
 
 <Command />
-<div class="m-2 flex h-[300vh] flex-col gap-3 lg:mx-auto">
+<div class="m-2 flex h-[300dvh] flex-col gap-3 lg:mx-auto lg:h-[300vh]">
 	<div class="h-screen space-y-2 pt-16 font-manrope">
 		<BlurIn word="BIO" class="text-xl" />
 		<Avatar.Root>
@@ -87,7 +88,9 @@
 			<p class=" font-semibold">Hello There! I’m Clifford,</p>
 			<span class="text-lg text-purple-300">/ˈklɪfəɹd/</span>
 		</div>
-		<p class="text-md">Avid Data Science enjoyer and based sofware developer 🗿</p>
+		<p class="text-md flex gap-1">
+			Avid Data Science enjoyer and based sofware developer {@html Moai}
+		</p>
 		<div class="pt-11">
 			<h1 class="font-manrope text-lg font-thin">My Tech</h1>
 		</div>
@@ -95,7 +98,7 @@
 		<Toolchain />
 	</div>
 	<Separator />
-	<div class="h-screen space-y-2 font-manrope">
+	<div class="mb-56 h-dvh space-y-2 font-manrope lg:h-screen">
 		<BlurIn class="text-xl" word="Selected Projects" />
 		<div class="grid max-w-lg gap-2">
 			{#each projexes as projex}
