@@ -105,8 +105,7 @@
 				{@render items(projex)}
 			{/each}
 			<div class="z-20 flex gap-2">
-				<a class="cursor-pointer" href="/">Read More ... </a>
-				<ArrowUpRight class=" size-4" />
+				<Button variant='outline' class='bg-transparent/20'>Read More <ArrowUpRight class=" size-4" /></Button>
 			</div>
 		</div>
 	</div>
@@ -147,7 +146,7 @@
 		<Card.Footer>
 			<div class="grid grid-cols-2 gap-1">
 				{#if projex.footer?.github}
-					<Button variant="outline" href={projex.footer.github} class="z-20 flex gap-1">
+					<Button variant="outline"  href={projex.footer.github} class="z-20 flex gap-1 bg-transparent/20">
 						<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
 							<path
 								fill="currentColor"
